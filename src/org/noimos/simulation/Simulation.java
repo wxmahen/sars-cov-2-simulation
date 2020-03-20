@@ -7,11 +7,11 @@ public class Simulation {
 
     private final static int ICU_BEDS = 500;
     private final static int POPULATION = 21500000;
-    private final static double SPREAD_FACTOR = 0.22;
+    private final static double SPREAD_FACTOR = 0.22; // per day
     private final static double SERIOUSNESS_RATE = 0.2;
-    private final static double AVG_INFECTION_DAYS = 2;
-    private final static double AVG_SYMPTOM_DAYS = 7;
-    private final static double AVG_CURE_DAYS = 7;
+    private final static double AVG_INFECTION_DAYS = 2; // starts infecting other after infection
+    private final static double AVG_SYMPTOM_DAYS = 7; // starts showing symptoms after infection
+    private final static double AVG_CURE_DAYS = 7; // days to cure after admission
     private final static double DEATH_RATE = 0.04;
 
     private int preInfectedOutside = 0;
