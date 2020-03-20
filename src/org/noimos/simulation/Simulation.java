@@ -7,7 +7,7 @@ public class Simulation {
 
     private final static int ICU_BEDS = 500;
     private final static int POPULATION = 21500000;
-    private final static double SPREAD_FACTOR = 0.22; // per day
+    private final static double SPREAD_FACTOR = 0.28; // per day
     private final static double SERIOUSNESS_RATE = 0.2;
     private final static double AVG_INFECTION_DAYS = 2; // starts infecting other after infection
     private final static double AVG_SYMPTOM_DAYS = 7; // starts showing symptoms after infection
@@ -15,7 +15,7 @@ public class Simulation {
     private final static double DEATH_RATE = 0.04;
 
     private int preInfectedOutside = 0;
-    private int infectedOutside = 70;
+    private int infectedOutside = 50;
     private int spreadingOutside = 0;
     private int hospitalized = 70;
     private int serious = 11;
@@ -78,10 +78,7 @@ public class Simulation {
     }
 
     private void printResults() {
-        System.out.println("Infected Outside: " + infectedOutside);
-        System.out.println("Spreading Outside: " + spreadingOutside);
-        System.out.println("Hospitalized: " + hospitalized);
-        System.out.println("Serious: " + serious);
+        System.out.println("Not Infected: " + (POPULATION - recovered - dead));
         System.out.println("Recovered: " + recovered);
         System.out.println("Dead: " + dead);
     }
